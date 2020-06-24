@@ -4,9 +4,11 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import HomeScreen from '../screens/Home';
+import QuestionsScreen from '../screens/Questions';
+import SpacesScreen from '../screens/Spaces';
+import NotifsScreen from '../screens/Notifs';
+import { tintColor } from '../constants/Colors';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -25,54 +27,72 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={Platform.OS === 'ios' ? `ios-information-circle${focused ? '' : '-outline'}` : 'md-information-circle'}
     />
   ),
 };
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
+const QuestionsStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Questions: QuestionsScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+QuestionsStack.navigationOptions = {
+  tabBarLabel: 'Answer',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
 };
 
-LinksStack.path = '';
+QuestionsStack.path = '';
 
-const SettingsStack = createStackNavigator(
+const SpacesStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Spaces: SpacesScreen,
   },
   config
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+SpacesStack.navigationOptions = {
+  tabBarLabel: 'Spaces',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
 };
 
-SettingsStack.path = '';
+SpacesStack.path = '';
 
-const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
-});
+const NotifsStack = createStackNavigator(
+  {
+    Notifs: NotifsScreen,
+  },
+  config
+);
+
+NotifsStack.navigationOptions = {
+  tabBarLabel: 'Notifs',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+  ),
+};
+
+NotifsStack.path = '';
+
+const tabNavigator = createBottomTabNavigator(
+  {
+    HomeStack,
+    QuestionsStack,
+    SpacesStack,
+    NotifsStack
+  },
+  {
+    tabBarOptions: { activeTintColor: tintColor }
+  }
+);
 
 tabNavigator.path = '';
 

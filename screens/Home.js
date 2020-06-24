@@ -1,4 +1,3 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   Image,
@@ -10,7 +9,7 @@ import {
   View,
 } from 'react-native';
 
-export default function HomeScreen() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 28 }}>
@@ -19,10 +18,6 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-HomeScreen.navigationOptions = {
-  header: null,
-};
 
 const styles = StyleSheet.create({
   container: {

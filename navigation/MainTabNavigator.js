@@ -9,18 +9,17 @@ import QuestionsScreen from '../screens/Questions';
 import SpacesScreen from '../screens/Spaces';
 import NotifsScreen from '../screens/Notifs';
 import { tintColor } from '../constants/Colors';
+import Header from '../components/Header';
 
-const config = Platform.select({
-  web: { headerMode: 'screen' },
-  default: {},
-});
+const config = {
+  defaultNavigationOptions: ({ navigation }) => ({
+    header: <Header title={navigation.state.routeName} showExtraButtons={navigation.state.routeName != "Notifs"} />
+  })
+};
 
-const HomeStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-  },
-  config
-);
+const HomeStack = createStackNavigator({
+  Home: HomeScreen,
+}, config);
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
@@ -29,17 +28,14 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === 'ios' ? `ios-information-circle${focused ? '' : '-outline'}` : 'md-information-circle'}
     />
-  ),
+  )
 };
 
 HomeStack.path = '';
 
-const QuestionsStack = createStackNavigator(
-  {
-    Questions: QuestionsScreen,
-  },
-  config
-);
+const QuestionsStack = createStackNavigator({
+  Questions: QuestionsScreen,
+}, config);
 
 QuestionsStack.navigationOptions = {
   tabBarLabel: 'Answer',
@@ -50,34 +46,28 @@ QuestionsStack.navigationOptions = {
 
 QuestionsStack.path = '';
 
-const SpacesStack = createStackNavigator(
-  {
-    Spaces: SpacesScreen,
-  },
-  config
-);
+const SpacesStack = createStackNavigator({
+  Spaces: SpacesScreen,
+}, config);
 
 SpacesStack.navigationOptions = {
   tabBarLabel: 'Spaces',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+  )
 };
 
 SpacesStack.path = '';
 
-const NotifsStack = createStackNavigator(
-  {
-    Notifs: NotifsScreen,
-  },
-  config
-);
+const NotifsStack = createStackNavigator({
+  Notifs: NotifsScreen,
+}, config);
 
 NotifsStack.navigationOptions = {
   tabBarLabel: 'Notifs',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+  )
 };
 
 NotifsStack.path = '';

@@ -20,10 +20,6 @@ export default function QuestionsScreen() {
   );
 }
 
-QuestionsScreen.navigationOptions = {
-  header: null,
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

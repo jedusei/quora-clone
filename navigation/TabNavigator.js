@@ -19,7 +19,7 @@ const config = {
 };
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: HomeScreen
 }, config);
 
 HomeStack.navigationOptions = {

@@ -30,7 +30,10 @@ export default function Home({ navigation }) {
               </View>
               <Ionicons name="ios-close" size={24} color="#78787a" />
             </View>
-            <TouchableOpacity activeOpacity={0.7}>
+            <TouchableOpacity activeOpacity={0.7}
+              onPress={() => {
+                navigation.navigate('Answer', { url: item.answer.link });
+              }}>
               <View style={styles.answer_container}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <Image source={{ uri: item.answer.user_icon }} style={styles.user_icon} />

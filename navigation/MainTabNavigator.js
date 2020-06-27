@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import TabBarIcon from '../components/TabBarIcon';
+import { Feather, Ionicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeScreen from '../screens/Home';
 import QuestionsScreen from '../screens/Questions';
 import SpacesScreen from '../screens/Spaces';
@@ -22,11 +23,12 @@ const HomeStack = createStackNavigator({
 }, config);
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
+      component={MaterialCommunityIcons}
+      name={focused ? "home" : "home-outline"}
+      size={28}
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-information-circle${focused ? '' : '-outline'}` : 'md-information-circle'}
     />
   )
 };
@@ -38,9 +40,13 @@ const QuestionsStack = createStackNavigator({
 }, config);
 
 QuestionsStack.navigationOptions = {
-  tabBarLabel: 'Answer',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon
+      component={Feather}
+      name="edit"
+      size={24}
+      focused={focused}
+    />
   ),
 };
 
@@ -51,9 +57,13 @@ const SpacesStack = createStackNavigator({
 }, config);
 
 SpacesStack.navigationOptions = {
-  tabBarLabel: 'Spaces',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    <TabBarIcon
+      component={MaterialIcons}
+      name={focused ? "people" : "people-outline"}
+      size={28}
+      focused={focused}
+    />
   )
 };
 
@@ -64,9 +74,13 @@ const NotifsStack = createStackNavigator({
 }, config);
 
 NotifsStack.navigationOptions = {
-  tabBarLabel: 'Notifs',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    <TabBarIcon
+      component={Ionicons}
+      name={focused ? "ios-notifications" : "ios-notifications-outline"}
+      size={28}
+      focused={focused}
+    />
   )
 };
 
@@ -80,7 +94,10 @@ const tabNavigator = createBottomTabNavigator(
     NotifsStack
   },
   {
-    tabBarOptions: { activeTintColor: tintColor }
+    tabBarOptions: {
+      activeTintColor: tintColor,
+      showLabel: false
+    }
   }
 );
 

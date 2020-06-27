@@ -3,12 +3,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Colors from '../constants/Colors';
 
-export default function TabBarIcon(props) {
+export default function TabBarIcon({ component, ...props }) {
+  let Component = component;
   return (
-    <Ionicons
-      name={props.name}
-      size={26}
-      style={{ marginBottom: -3 }}
+    <Component
+      {...props}
       color={props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
     />
   );

@@ -1,0 +1,81 @@
+{
+    "subscribed": [
+        {
+            "name": "Everything Animals",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-721-100-fssysakpmiopfnanwvxdqarewhmidhhq.jpeg",
+            "link": "https://www.quora.com/q/naeqeepgogczuhov"
+        },
+        {
+            "name": "History & Mystery. Oh My!",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-498-100-scgapzvgppuwpkuowwuxgpricbrjnmxi.jpeg",
+            "link": "https://www.quora.com/q/eusqauvtetbomdzp"
+        },
+        {
+            "name": "Coronavirus",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1587006-100-oproxbhrmjmoohuspzqhnyqdlperemha.jpeg",
+            "link": "https://www.quora.com/q/fhyvfmxcexzhfjxy"
+        },
+        {
+            "name": "Gold Medal Answers",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-405-100-dppwtebvhfnnfybjnrujpqfcftomhdbd.jpeg",
+            "link": "https://www.quora.com/q/hwhlowbyxhezsglq"
+        },
+        {
+            "name": "Code",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1122-100-ookytsozqmggkanzqpqojaagnefubsff.jpeg",
+            "link": "https://www.quora.com/q/ovdhzertthfbdgvk"
+        },
+        {
+            "name": "World History",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-876-100-ydkstkucumcigpfbnpezxdohjudhlkja.jpeg",
+            "link": "https://www.quora.com/q/muvratugbseeqbmp"
+        },
+        {
+            "name": "Science 101",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1575346-100-aydqwxgbletgidbilqdwkpbvpvmotnjz.jpeg",
+            "link": "https://www.quora.com/q/vyebcpisvjfiqmiu"
+        }
+    ],
+    "discover": [
+        {
+            "name": "What If?",
+            "desc": "Anything worth sharing.",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1576237-100-smanxchdzsxdvcvuneeemkizimrxtcub.jpeg",
+            "banner": "https://qph.fs.quoracdn.net/main-custom-tc-1576237-320x80-zjabqqyevsvvlpxsvztixcbasmedytel.jpeg",
+            "followers": "36.9K",
+            "link": "https://www.quora.com/q/ywnkihecveucknpz"
+        },
+        {
+            "name": "Anime Heaven",
+            "desc": "This is a place for people to discuss anime topics of all kinds and any anime.",
+            "followers": "9.2K",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1601488-100-zuwdkzzofzoigytlfrgfbmjhmlcqqmfp.jpeg",
+            "banner": "https://qph.fs.quoracdn.net/main-custom-tc-1601488-320x80-blbnlfggzmxgepqqlxjgsvneeogehlbb.jpeg",
+            "link": "https://www.quora.com/q/ipotxlbolnkuxlor"
+        },
+        {
+            "name": "Shocking!",
+            "desc": "All about shocking facts and experiences in this world!",
+            "followers": "5.7K",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1607973-100-dytquzyxjudpfulynhdccspvlhdjnols.jpeg",
+            "banner": "https://qph.fs.quoracdn.net/main-custom-tc-1607973-320x80-vxxstgkrzcqgttwmsfibunovivximfiu.jpeg",
+            "link": "https://www.quora.com/q/kdiipdbxrpiltmvg"
+        },
+        {
+            "name": "Learning React",
+            "desc": "A space for notes, tips and resources for anyone learning the React framework.",
+            "followers": "9.3K",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-1578965-100-najbyagqjsduzkspfsttwbsrrhlojkdy.jpeg",
+            "banner": "https://qsf.fs.quoracdn.net/-3-ans_frontend_assets.images.tribes.defaults.space_banner_blue.png-26-5b9f1a9967726519.png",
+            "link": "https://www.quora.com/q/gxzncivrlmjycurl"
+        },
+        {
+            "name": "Life is Beautiful",
+            "desc": "All my answers on Life, General rants are here.",
+            "followers": "1.1M",
+            "icon": "https://qph.fs.quoracdn.net/main-thumb-ti-728-100-pzfpsibstginltpltmroferlhbvlcdnh.jpeg",
+            "banner": "https://qph.fs.quoracdn.net/main-custom-tc-728-320x80-mvavxmvcffanqjfaqordwrsusiaptlly.jpeg",
+            "link": "https://www.quora.com/q/ajhopmoccgveqfmq"
+        }
+    ]
+}

@@ -32,7 +32,7 @@ export default function Home({ navigation }) {
             </View>
             <TouchableOpacity activeOpacity={0.7}
               onPress={() => {
-                navigation.navigate('Answer', { url: item.answer.link });
+                navigation.navigate('WebView', { url: item.answer.link });
               }}>
               <View style={styles.answer_container}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>

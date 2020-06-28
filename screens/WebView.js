@@ -6,7 +6,7 @@ import {
 import { WebView } from 'react-native-webview';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function Answer({ navigation }) {
+export default function WebViewScreen({ navigation }) {
     const [loading, setLoading] = React.useState(true);
     return (
         <View style={styles.container}>
@@ -33,7 +33,7 @@ export default function Answer({ navigation }) {
     );
 }
 
-Answer.navigationOptions = {
+WebViewScreen.navigationOptions = {
     header: null
 };
 

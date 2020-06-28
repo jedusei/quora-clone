@@ -3,11 +3,11 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
 
 import MainTabNavigator from './TabNavigator';
-import AnswerScreen from '../screens/Answer';
+import WebViewScreen from '../screens/WebView';
 
 export default createStackNavigator({
     Tabs: MainTabNavigator,
-    Answer: AnswerScreen
+    WebView: WebViewScreen
 }, {
     defaultNavigationOptions: {
         header: null

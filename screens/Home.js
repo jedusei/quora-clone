@@ -4,6 +4,7 @@ import {
   Text, TouchableOpacity, View
 } from 'react-native';
 import { EvilIcons, Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import ImageWithBorder from '../components/ImageWithBorder';
 
 const feed = require('../assets/json/feed.json');
 
@@ -16,14 +17,7 @@ export default function Home({ navigation }) {
         renderItem={({ item }) =>
           <View style={styles.post}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-              <View style={styles.space_icon}>
-                <Image source={{ uri: item.space_icon }}
-                  style={{
-                    width: styles.space_icon.width - (2 * styles.space_icon.borderWidth),
-                    height: styles.space_icon.height - (2 * styles.space_icon.borderWidth),
-                    borderRadius: styles.space_icon.borderRadius
-                  }} />
-              </View>
+              <ImageWithBorder source={{ uri: item.space_icon }} style={styles.space_icon} />
               <View style={{ flex: 1, marginHorizontal: 10 }}>
                 <Text style={styles.space_title}>{item.space_title}<Text style={styles.post_subtext}> · {item.delta_time}</Text></Text>
                 <Text style={styles.post_subtext}>Shared by {item.shared_by}</Text>

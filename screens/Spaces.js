@@ -4,6 +4,7 @@ import {
   Image, FlatList, StyleSheet, Text, TouchableOpacity, TouchableNativeFeedback, View
 } from 'react-native';
 import { Entypo, FontAwesome5, Ionicons } from '@expo/vector-icons';
+import ImageWithBorder from '../components/ImageWithBorder';
 
 const spaces = require('../assets/json/spaces.json');
 
@@ -38,14 +39,7 @@ export default function Spaces({ navigation }) {
               navigation.navigate('WebView', { url: item.link });
             }}>
             <View style={styles.space_row}>
-              <View style={styles.space_row_img}>
-                <Image source={{ uri: item.icon }}
-                  style={{
-                    width: styles.space_row_img.width - (2 * styles.space_row_img.borderWidth),
-                    height: styles.space_row_img.height - (2 * styles.space_row_img.borderWidth),
-                    borderRadius: styles.space_row_img.borderRadius
-                  }} />
-              </View>
+              <ImageWithBorder source={{ uri: item.icon }} style={styles.space_row_img} />
               <Text style={styles.space_row_text}>{item.name}</Text>
               <Entypo name="chevron-thin-right" size={18} color="#999b9e" />
             </View>
